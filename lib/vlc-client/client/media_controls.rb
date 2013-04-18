@@ -100,6 +100,22 @@ module VLC
         volume(level)
       end
 
+      def clear
+        connection.write("clear", true)
+      end
+
+      def playlist
+        connection.write("playlist", false)
+      end
+
+      def enqueue(path)
+        connection.write("enqueue #{path}", true)
+      end
+
+      def next
+        connection.write "next"
+      end
+
     private
       def media_arg(media)
         case media
