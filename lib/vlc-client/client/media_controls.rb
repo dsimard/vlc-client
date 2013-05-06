@@ -117,7 +117,7 @@ module VLC
       end
 
       def status
-        connetion.write "status", false
+        connection.write "status", false
       end
 
     private
