@@ -116,6 +116,10 @@ module VLC
         connection.write "next"
       end
 
+      def status
+        connetion.write "status", false
+      end
+
     private
       def media_arg(media)
         case media
